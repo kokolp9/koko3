@@ -1,0 +1,94 @@
+body {
+    font-family: 'Cairo', sans-serif; /* استخدام خط عربي جذاب */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6dd5ed, #2193b0); /* تدرج لوني جذاب */
+    direction: rtl;
+    margin: 0; /* إزالة الهوامش الافتراضية */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* خلفية بيضاء شفافة قليلاً */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* ظل أكثر بروزًا */
+    text-align: center;
+}
+
+.welcome-message {
+    color: #ff6b6b; /* لون جذاب لرسالة الترحيب */
+    font-size: 24px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out; /* إضافة تأثير تلاشي للظهور */
+}
+
+.container h1 {
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #ff6b6b; /* لون جذاب للزر */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* إضافة تأثير عند التحويم والضغط */
+}
+
+button:hover {
+    background-color: #e44d4d;
+    transform: scale(1.05); /* تكبير طفيف عند التحويم */
+}
+
+.results {
+    margin-top: 30px;
+    font-size: 18px;
+    color: #333;
+}
+
+.results p {
+    margin-bottom: 12px;
+}
+
+/* إضافة تأثير تلاشي للظهور */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+/* ... باقي تنسيقات CSS ... */
+
+#description {
+    margin-top: 20px;
+    line-height: 1.6; /* لتحسين قابلية القراءة */
+    text-align: right; /* محاذاة النص إلى اليمين */
+}
+
+#description strong {
+    font-weight: bold;
+    color: #555;
+}
