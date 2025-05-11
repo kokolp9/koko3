@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محسب العمر والبرج</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="welcome-message" class="welcome-message"></h1>
+        <h1>اكتشف أعماق شخصيتك الفلكية!</h1>
+        <div class="input-group">
+            <label for="day">يوم الميلاد:</label>
+            <input type="number" id="day" min="1" max="31" required>
+        </div>
+        <div class="input-group">
+            <label for="month">شهر الميلاد:</label>
+            <input type="number" id="month" min="1" max="12" required>
+        </div>
+        <div class="input-group">
+            <label for="year">سنة الميلاد:</label>
+            <input type="number" id="year" required>
+        </div>
+        <button onclick="calculate()">انطلق نحو أسرار النجوم!</button>
+        <div id="results" class="results">
+            <p id="age"></p>
+            <p id="sign"></p>
+            <div id="description"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const messages = [
+                "مرحباً بك في عالم التنجيم!",
+                "استكشف خبايا برجك الفلكي!",
+                "دع النجوم تكشف لك أسرارك!",
+                "اكتشف الصفات الفريدة لبرجك!"
+            ];
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            document.getElementById("welcome-message").textContent = messages[randomIndex];
+        });
+    </script>
+</body>
+</html>
